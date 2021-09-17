@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-rd-p5A">
+                                <rect key="frame" x="0.0" y="97" width="414" height="799"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udQ-Cu-4gx">
+                                <rect key="frame" x="309" y="55" width="85" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="04J-A4-WNB"/>
+                                    <constraint firstAttribute="width" constant="85" id="YzM-VY-vDi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dm1-W4-cjG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl9-Ls-RtH">
+                                <rect key="frame" x="20" y="55" width="85" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7sc-bs-G82"/>
+                                    <constraint firstAttribute="width" constant="85" id="K7q-pR-rpU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vRm-tf-oUe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tMv-rd-p5A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1uw-uN-0v2"/>
+                            <constraint firstAttribute="bottom" secondItem="tMv-rd-p5A" secondAttribute="bottom" id="3E4-pp-3Nd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="udQ-Cu-4gx" secondAttribute="trailing" constant="20" id="GcB-br-zol"/>
+                            <constraint firstItem="wl9-Ls-RtH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JRS-Mf-I9I"/>
+                            <constraint firstItem="tMv-rd-p5A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U3L-KU-FE1"/>
+                            <constraint firstItem="tMv-rd-p5A" firstAttribute="top" secondItem="udQ-Cu-4gx" secondAttribute="bottom" constant="8" symbolic="YES" id="Wkn-Bg-haK"/>
+                            <constraint firstItem="udQ-Cu-4gx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="lC4-yD-hxa"/>
+                            <constraint firstItem="wl9-Ls-RtH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="o9e-1a-MDJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="RoutesTableView" destination="tMv-rd-p5A" id="GC6-hB-ZZF"/>
+                        <outlet property="btn_clear" destination="wl9-Ls-RtH" id="8Eb-Kb-d8C"/>
+                        <outlet property="btn_load" destination="udQ-Cu-4gx" id="6Qn-1I-bO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
